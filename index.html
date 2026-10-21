@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniket Kiran — Cloud & DevOps Engineer | AWS Certified</title>
+  <meta name="description" content="Portfolio of Aniket Kiran — Cloud & DevOps Engineer, AWS Certified Solutions Architect Associate (SAA-C03), Kubernetes, Docker, and Full-Stack Systems Builder.">
+  <meta name="keywords" content="Aniket Kiran, Cloud Engineer, DevOps, AWS Certified, Kubernetes, Docker, UPES, Portfolio, Python, Next.js, Infrastructure">
+  <meta name="author" content="Aniket Kiran">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Aniket Kiran — Cloud & DevOps Engineer">
+  <meta property="og:description" content="Building scalable cloud systems, container orchestration, and reliable infrastructure. AWS Certified Solutions Architect.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="profile.png">
+
+  <!-- Favicon / Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Cosmic Canvas for Background Starfield & Particle Grid -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Glowing background ambient orbs -->
+  <div class="ambient-glow orb-1"></div>
+  <div class="ambient-glow orb-2"></div>
+  <div class="ambient-glow orb-3"></div>
+
+  <!-- Top Glass Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="#home" class="terminal-brand" aria-label="Aniket Kiran Homepage">
+        <span class="prompt-symbol">~</span>
+        <span class="brand-text">aniket</span>
+        <span class="blinking-cursor">_</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span> about</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">02.</span> experience</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> projects</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">04.</span> stack</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span> contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="Aniket_Resume.pdf" target="_blank" class="btn-resume" rel="noopener">
+          <span>Resume</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">~/navigation</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#about" class="drawer-link"><span class="nav-num">01.</span> About</a>
+      <a href="#experience" class="drawer-link"><span class="nav-num">02.</span> Experience</a>
+      <a href="#projects" class="drawer-link"><span class="nav-num">03.</span> Selected Projects</a>
+      <a href="#skills" class="drawer-link"><span class="nav-num">04.</span> Tech Stack</a>
+      <a href="#contact" class="drawer-link"><span class="nav-num">05.</span> Contact</a>
+      <a href="Aniket_Resume.pdf" target="_blank" class="drawer-resume-btn">View Resume ↗</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left Hero Copy -->
+        <div class="hero-copy">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span class="status-text">AVAILABLE FOR CLOUD & DEVOPS OPPORTUNITIES</span>
+          </div>
+
+          <div class="hero-terminal-cmd">
+            <span class="term-prefix">$</span>
+            <span class="term-code">whoami --verbose</span>
+          </div>
+
+          <h1 class="hero-title">
+            Aniket <span class="gradient-text">Kiran</span>
+          </h1>
+
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">&gt;</span>
+            <span id="typewriter-text" class="typewriter-text">Cloud &amp; DevOps Engineer</span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-lead">
+            Computer Engineering scholar at <strong>UPES</strong> and aspiring Cloud &amp; DevOps Engineer passionate about architecting resilient cloud infrastructure, container orchestration, and high-performance automated delivery pipelines.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary">
+              <span>Explore My Work</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+            </a>
+            <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="Aniket_Resume.pdf" target="_blank" rel="noopener" class="btn-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Resume</span>
+            </a>
+          </div>
+
+          <!-- Social Links Row -->
+          <div class="social-strip">
+            <span class="social-label">CONNECT //</span>
+            <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aniket-kiran-274459292/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://leetcode.com/u/Intel161/" target="_blank" rel="noopener" class="social-icon" title="LeetCode">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.607c.515.515 1.344.515 1.859 0 .515-.515.515-1.344 0-1.859l-2.697-2.607c-.967-.967-2.29-1.424-3.682-1.424s-2.715.457-3.682 1.424l-4.319 4.38C2.602 11.625 2 13.064 2 14.674s.602 3.049 1.579 4.047l4.332 4.363C8.878 24.062 10.201 24.5 11.582 24.5s2.715-.438 3.682-1.424l2.697-2.607c.515-.515.515-1.344 0-1.859-.515-.515-1.344-.515-1.859 0z"/><path d="M10.802 13.674h10.605c.728 0 1.319-.591 1.319-1.319 0-.728-.591-1.319-1.319-1.319H10.802c-.728 0-1.319.591-1.319 1.319 0 .728.591 1.319 1.319 1.319z"/></svg>
+            </a>
+            <a href="mailto:aniketkrsingh12@gmail.com" class="social-icon" title="Email Direct">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Banner -->
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <span class="stat-value">AWS SAA</span>
+              <span class="stat-label">Certified Architect</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">K8s &amp; Docker</span>
+              <span class="stat-label">Production Deployments</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">UPES '27</span>
+              <span class="stat-label">B.Tech CE · 7.58 CGPA</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value">Semi-Finalist</span>
+              <span class="stat-label">CSA Cloud Hackathon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual: Holographic Cyber Profile Card -->
+        <div class="hero-visual">
+          <div class="visual-wrapper">
+            <div class="cyber-card">
+              <div class="cyber-card-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-title">aniket_kiran.sys</span>
+                <span class="window-ping">LIVE</span>
+              </div>
+
+              <div class="cyber-portrait-frame">
+                <div class="corner-bracket top-left"></div>
+                <div class="corner-bracket top-right"></div>
+                <div class="corner-bracket bottom-left"></div>
+                <div class="corner-bracket bottom-right"></div>
+                
+                <img src="profile.png" alt="Aniket Kiran" class="cyber-img">
+                
+                <div class="hologram-scanline"></div>
+              </div>
+
+              <div class="cyber-card-footer">
+                <div class="cyber-badge">
+                  <span class="ping-circle"></span>
+                  <span>Cloud / DevOps Engineer</span>
+                </div>
+                <div class="cyber-meta">
+                  <span>UPES Dehradun</span> · <span>AWS Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 01. ABOUT SECTION -->
+    <section id="about" class="content-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="kicker-tag">01 // ABOUT ME</div>
+          <h2 class="section-title">
+            Engineering for the <span class="gradient-text">Cloud Era.</span>
+          </h2>
+          <p class="section-subtitle">
+            Bridging infrastructure automation, container orchestration, and reliable application delivery.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          
+          <div class="about-text-column">
+            <p class="about-lead">
+              I am pursuing a <strong>B.Tech in Computer Engineering at UPES</strong> (Dehradun), dedicated to mastering the full lifecycle of modern applications—from writing reliable code to containerizing workloads, designing cloud architectures, and ensuring continuous production availability.
+            </p>
+            <p>
+              My hands-on experience covers <strong>AWS cloud services</strong> (EC2, S3, IAM, Lambda, CloudWatch), <strong>Kubernetes</strong> resource isolation and governance, <strong>Docker</strong> multi-stage pipelines, and modern full-stack development with <strong>FastAPI, Node.js, PostgreSQL, React, and Next.js</strong>.
+            </p>
+            <p>
+              I believe great cloud engineering is about solving fundamental problems: <em>architectural scalability, automated recovery, cost efficiency, and observability</em>. Alongside cloud systems, I continuously hone my Data Structures &amp; Algorithms to write performant, maintainable software.
+            </p>
+
+            <div class="highlight-cards-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                </div>
+                <div>
+                  <h4>Cloud Architecture</h4>
+                  <p>AWS Certified Associate, multi-cloud evaluation &amp; cost governance.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <div>
+                  <h4>Container Orchestration</h4>
+                  <p>Kubernetes namespaces, ResourceQuotas, rolling updates &amp; Macvlan networking.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div>
+                  <h4>Reliable Release Systems</h4>
+                  <p>Canary release simulator, automated rollbacks, and health verification.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <h4>Infrastructure as Code</h4>
+                  <p>Terraform, AWS CloudFormation &amp; CDK foundations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic & Credential Card -->
+          <div class="about-card-column">
+            <div class="credential-box">
+              <div class="box-header">
+                <span class="box-badge">ACADEMIC &amp; CREDENTIALS</span>
+                <span class="box-year">2023 — 2027</span>
+              </div>
+
+              <div class="edu-item">
+                <div class="edu-badge">UPES</div>
+                <div class="edu-info">
+                  <h3>University of Petroleum and Energy Studies</h3>
+                  <p class="edu-degree">B.Tech in Computer Engineering</p>
+                  <p class="edu-meta">Dehradun, India · <strong>Current CGPA: 7.58 / 10</strong></p>
+                  <span class="edu-tag">Cloud Computing Focus</span>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="cert-item">
+                <div class="cert-icon-badge">AWS</div>
+                <div>
+                  <h4>AWS Certified Solutions Architect – Associate</h4>
+                  <p>Validation of comprehensive cloud architecture, security &amp; cost design.</p>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-icon-badge">CSA</div>
+                <div>
+                  <h4>Hackathon 4.0 Semi-Finalist</h4>
+                  <p>UPES Cloud Security Alliance (CSA) Student Chapter.</p>
+                </div>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-icon-badge">ACA</div>
+                <div>
+                  <h4>AWS Academy Graduate</h4>
+                  <p>Cloud Foundations &amp; Cloud Architecting curricula completed.</p>
+                </div>
+              </div>
+
+              <div class="status-footer">
+                <span class="status-indicator"></span>
+                <span>Active Continuous Learner &amp; System Builder</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02. EXPERIENCE SECTION -->
+    <section id="experience" class="content-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="kicker-tag">02 // EXPERIENCE</div>
+          <h2 class="section-title">
+            Where I've <span class="gradient-text">Contributed.</span>
+          </h2>
+          <p class="section-subtitle">
+            Applying cloud engineering, container orchestration, and operational rigor in production settings.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+          <!-- Experience 1: Pheme Software -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">JUN 2026 — AUG 2026</span>
+                <span class="badge-featured">RECENT INTERNSHIP</span>
+              </div>
+              <h3 class="role-title">
+                Cloud Engineering Intern <span class="company-name">@ Pheme Software</span>
+              </h3>
+              <p class="company-subtitle">IBM Platinum Business Partner · Remote</p>
+              
+              <p class="role-summary">
+                Operated in a hands-on Cloud &amp; DevOps environment applying Kubernetes concepts to isolate environments, govern compute/memory resources, and automate resilient application rollouts.
+              </p>
+
+              <ul class="role-bullets">
+                <li>Architected a multi-tier Minikube Kubernetes cluster establishing strict namespace isolation across <strong>Dev, Test, and Production</strong> environments.</li>
+                <li>Enforced governance with <strong>ResourceQuotas</strong> and <strong>LimitRanges</strong> to strictly constrain CPU, memory, and pod proliferation.</li>
+                <li>Configured and managed workloads with <strong>Deployments, ClusterIP/NodePort Services, ConfigMaps, and ReplicaSets</strong>, practicing zero-downtime rolling updates.</li>
+                <li>Automated deployment validation scripts and deepened production readiness best practices for containerized microservices.</li>
+              </ul>
+
+              <div class="role-tags">
+                <span>Kubernetes</span>
+                <span>Minikube</span>
+                <span>Docker</span>
+                <span>ResourceQuotas</span>
+                <span>LimitRanges</span>
+                <span>Rolling Updates</span>
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Punjab National Bank -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">JUN 2025 — JUL 2025</span>
+                <span class="badge-neutral">OPERATIONS</span>
+              </div>
+              <h3 class="role-title">
+                Operations Intern <span class="company-name">@ Punjab National Bank</span>
+              </h3>
+              <p class="company-subtitle">Muzaffarpur, India</p>
+
+              <p class="role-summary">
+                Supported enterprise branch operations with an emphasis on banking technology systems, secure operational documentation, and customer-facing workflows.
+              </p>
+
+              <ul class="role-bullets">
+                <li>Managed branch digital records, operational documentation, and technology-enabled transaction audits.</li>
+                <li>Gained practical exposure to enterprise compliance, workflow automation, and cross-functional team coordination.</li>
+              </ul>
+
+              <div class="role-tags">
+                <span>Banking Systems</span>
+                <span>Enterprise Workflows</span>
+                <span>Operations</span>
+                <span>Documentation</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03. PROJECTS SECTION -->
+    <section id="projects" class="content-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="kicker-tag">03 // SELECTED WORK</div>
+          <h2 class="section-title">
+            Projects that <span class="gradient-text">Ship &amp; Scale.</span>
+          </h2>
+          <p class="section-subtitle">
+            Full-stack systems, automated cloud deployment simulators, and AI multimodal pipelines.
+          </p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; APIs</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Deep Learning</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: CloudRec -->
+          <article class="project-card featured" data-category="cloud fullstack">
+            <div class="card-top">
+              <div class="project-num">#01 // MULTI-CLOUD DECISION ENGINE</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">CloudRec — Multi-Cloud Decision Platform</h3>
+            
+            <div class="metric-callout">
+              <span class="callout-icon">⚡</span>
+              <span>Workload-aware scoring &amp; cost estimation across AWS, Azure, and GCP</span>
+            </div>
+
+            <p class="project-desc">
+              A comprehensive full-stack decision platform engineered to eliminate guesswork when choosing cloud infrastructure. Computes workload specifications, calculates projected regional costs, and generates optimal architecture recommendations through an intuitive dashboard. Incorporates Google OAuth for user authentication and stateful recommendation exports.
+            </p>
+
+            <div class="project-tags">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>PostgreSQL</span>
+              <span>AWS</span>
+              <span>Azure</span>
+              <span>GCP</span>
+              <span>Google OAuth</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="repo-link">
+                <span>View Architecture &amp; Code</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Canary Deployment Simulator -->
+          <article class="project-card" data-category="cloud">
+            <div class="card-top">
+              <div class="project-num">#02 // DEVSECOPS &amp; RELIABILITY</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">Canary Deployment Simulator</h3>
+
+            <div class="metric-callout">
+              <span class="callout-icon">🛡️</span>
+              <span>Automated error rate monitoring &amp; instant rollback threshold safety</span>
+            </div>
+
+            <p class="project-desc">
+              Demonstrates progressive production release safety. Simulates dynamic traffic splitting between stable and canary versions (e.g. 10% → 30% → 100%). Automatically halts rollout and initiates immediate fallback if synthetic latency or HTTP 5xx error spikes exceed defined thresholds.
+            </p>
+
+            <div class="project-tags">
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>React</span>
+              <span>Docker Compose</span>
+              <span>PostgreSQL</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="repo-link">
+                <span>View Repository</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: Docker_WebApp & Macvlan Networking -->
+          <article class="project-card" data-category="cloud fullstack">
+            <div class="card-top">
+              <div class="project-num">#03 // CONTAINER NETWORKING</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5/Docker_WebApp" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">Containerized Student Records REST API</h3>
+
+            <div class="metric-callout">
+              <span class="callout-icon">🐳</span>
+              <span>Docker Compose, Macvlan isolation &amp; persistent volumes</span>
+            </div>
+
+            <p class="project-desc">
+              Production-grade Node.js and PostgreSQL REST API containerization utilizing Macvlan networking for direct physical network interface addressing. Features automated data persistence with managed volume drivers, environment configuration, and strict container network segmentation.
+            </p>
+
+            <div class="project-tags">
+              <span>Docker</span>
+              <span>Docker Compose</span>
+              <span>Macvlan</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Linux</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5/Docker_WebApp" target="_blank" rel="noopener" class="repo-link">
+                <span>View on GitHub</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: IMUSA Multimodal AI -->
+          <article class="project-card" data-category="ai">
+            <div class="card-top">
+              <div class="project-num">#04 // MULTIMODAL DEEP LEARNING</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5/IMUSA" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">IMUSA — Multimodal Sentiment &amp; Sarcasm AI</h3>
+
+            <div class="metric-callout">
+              <span class="callout-icon">🧠</span>
+              <span>ViT + Google MuRIL cross-attention for low-resource Punjabi memes</span>
+            </div>
+
+            <p class="project-desc">
+              A deep-learning architecture designed to decipher sentiment and sarcasm in multimodal memes. Fuses visual embeddings from Vision Transformer (ViT) with regional multilingual semantic features from Google's MuRIL via bidirectional cross-attention mechanism for 4-class classification.
+            </p>
+
+            <div class="project-tags">
+              <span>PyTorch</span>
+              <span>Vision Transformer</span>
+              <span>MuRIL</span>
+              <span>Cross-Attention</span>
+              <span>Python</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5/IMUSA" target="_blank" rel="noopener" class="repo-link">
+                <span>View on GitHub</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 5: Containerization & DevOps Lab Suite -->
+          <article class="project-card" data-category="cloud">
+            <div class="card-top">
+              <div class="project-num">#05 // CLOUD ORCHESTRATION</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5/Containerization-and-DevOps" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">Kubernetes &amp; DevOps Lab Suite</h3>
+
+            <div class="metric-callout">
+              <span class="callout-icon">⚙️</span>
+              <span>Minikube cluster configs, namespace RBAC &amp; rolling upgrades</span>
+            </div>
+
+            <p class="project-desc">
+              Comprehensive repository documenting practical cloud infrastructure engineering: setting up local cluster environments, declaring declarative deployment manifests, establishing persistent storage volumes, and configuring cluster observability.
+            </p>
+
+            <div class="project-tags">
+              <span>Kubernetes</span>
+              <span>Minikube</span>
+              <span>kubectl</span>
+              <span>Docker</span>
+              <span>YAML</span>
+              <span>Bash</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5/Containerization-and-DevOps" target="_blank" rel="noopener" class="repo-link">
+                <span>View on GitHub</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 6: IBM Cloud Engineering Repo -->
+          <article class="project-card" data-category="cloud fullstack">
+            <div class="card-top">
+              <div class="project-num">#06 // ENTERPRISE LABS</div>
+              <div class="project-actions">
+                <a href="https://github.com/Pavilioni5/IBM-" target="_blank" rel="noopener" class="action-link" title="Source Code">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">IBM Cloud &amp; Microservices Repository</h3>
+
+            <div class="metric-callout">
+              <span class="callout-icon">💼</span>
+              <span>Enterprise cloud patterns, hands-on microservices &amp; deployment labs</span>
+            </div>
+
+            <p class="project-desc">
+              Dedicated repository demonstrating architectural implementations developed during industry training with an IBM Platinum Business Partner. Focuses on container security, multi-service communication, and enterprise orchestration fundamentals.
+            </p>
+
+            <div class="project-tags">
+              <span>IBM Cloud</span>
+              <span>Microservices</span>
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>Linux</span>
+            </div>
+
+            <div class="project-footer-link">
+              <a href="https://github.com/Pavilioni5/IBM-" target="_blank" rel="noopener" class="repo-link">
+                <span>View on GitHub</span>
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04. TECH STACK / TOOLBOX -->
+    <section id="skills" class="content-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="kicker-tag">04 // TOOLBOX</div>
+          <h2 class="section-title">
+            Technologies &amp; <span class="gradient-text">Cloud Tools.</span>
+          </h2>
+          <p class="section-subtitle">
+            A battle-tested set of tools tailored for cloud reliability, infrastructure automation, and software delivery.
+          </p>
+        </div>
+
+        <div class="skills-category-grid">
+
+          <!-- Category 1: Cloud & Infrastructure -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+              <div>
+                <span class="cat-kicker">01. CLOUD PLATFORMS</span>
+                <h3 class="cat-title">Cloud &amp; Infrastructure</h3>
+              </div>
+            </div>
+            <p class="cat-desc">Architecting highly available, multi-zone architectures with cost controls and security governance.</p>
+            <div class="chips-wrap">
+              <span class="tech-chip highlight">AWS (EC2, S3, IAM)</span>
+              <span class="tech-chip highlight">AWS Lambda</span>
+              <span class="tech-chip">CloudWatch</span>
+              <span class="tech-chip">Microsoft Azure</span>
+              <span class="tech-chip">Google Cloud (GCP)</span>
+              <span class="tech-chip">Terraform (IaC)</span>
+              <span class="tech-chip">AWS CloudFormation</span>
+              <span class="tech-chip">AWS CDK</span>
+            </div>
+          </div>
+
+          <!-- Category 2: DevOps & Containers -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div>
+                <span class="cat-kicker">02. CONTAINERS &amp; CI/CD</span>
+                <h3 class="cat-title">DevOps &amp; Orchestration</h3>
+              </div>
+            </div>
+            <p class="cat-desc">Packaging lightweight microservices, managing rolling updates, and automating environments.</p>
+            <div class="chips-wrap">
+              <span class="tech-chip highlight">Kubernetes (K8s)</span>
+              <span class="tech-chip highlight">Docker &amp; Compose</span>
+              <span class="tech-chip highlight">Minikube</span>
+              <span class="tech-chip">kubectl CLI</span>
+              <span class="tech-chip">ResourceQuotas</span>
+              <span class="tech-chip">LimitRanges</span>
+              <span class="tech-chip">CI/CD Automation</span>
+              <span class="tech-chip">Linux / Bash Scripting</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend & Development -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div>
+                <span class="cat-kicker">03. PROGRAMMING &amp; APIS</span>
+                <h3 class="cat-title">Software Engineering</h3>
+              </div>
+            </div>
+            <p class="cat-desc">Building resilient RESTful interfaces, data pipelines, and responsive web applications.</p>
+            <div class="chips-wrap">
+              <span class="tech-chip highlight">Python</span>
+              <span class="tech-chip highlight">JavaScript (ES6+)</span>
+              <span class="tech-chip">C / C++</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">React.js</span>
+              <span class="tech-chip">Next.js</span>
+              <span class="tech-chip">RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Data & Tooling -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <div class="cat-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div>
+                <span class="cat-kicker">04. DATA &amp; TOOLING</span>
+                <h3 class="cat-title">Databases &amp; Systems</h3>
+              </div>
+            </div>
+            <p class="cat-desc">Data persistence, schema design, version control workflows, and deep learning libraries.</p>
+            <div class="chips-wrap">
+              <span class="tech-chip highlight">PostgreSQL</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip highlight">Git &amp; GitHub</span>
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">Vision Transformer</span>
+              <span class="tech-chip">Postman</span>
+              <span class="tech-chip">VS Code</span>
+              <span class="tech-chip">Macvlan Networking</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Official Certification Showcase Banner -->
+        <div class="cert-banner">
+          <div class="cert-banner-content">
+            <div class="cert-badge-visual">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="cert-banner-text">
+              <h3>AWS Certified Solutions Architect – Associate (SAA-C03)</h3>
+              <p>Demonstrated mastery in architecting secure, resilient, high-performing, and cost-optimized architectures on AWS.</p>
+              <div class="cert-tags-row">
+                <span>✦ Official AWS Certification</span>
+                <span>✦ Multi-Tier Design</span>
+                <span>✦ High Availability &amp; Disaster Recovery</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-banner-action">
+            <a href="Aniket_Resume.pdf" target="_blank" rel="noopener" class="btn-cert-link">
+              <span>View Credential on Resume</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05. CONTACT SECTION -->
+    <section id="contact" class="content-section">
+      <div class="section-container">
+        
+        <div class="contact-terminal-box">
+          
+          <div class="contact-terminal-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="contact-term-title">contact@aniket:~# ping --connect</span>
+            <span class="contact-term-status">ONLINE</span>
+          </div>
+
+          <div class="contact-terminal-body">
+            <div class="kicker-tag">05 // WHAT'S NEXT</div>
+            <h2 class="contact-heading">
+              Let's build something <span class="gradient-text">that scales.</span>
+            </h2>
+            <p class="contact-copy">
+              I am actively seeking <strong>Cloud Engineering, DevOps, Platform Engineering, and Software Engineering</strong> opportunities where I can apply container orchestration, cloud automation, and dependable system building. Whether you have an open role, an exciting project, or simply want to connect, my inbox is always open.
+            </p>
+
+            <!-- Interactive Copy-to-Clipboard Box -->
+            <div class="copy-email-box" id="copy-email-card" role="button" tabindex="0" title="Click to copy email address">
+              <div class="email-details">
+                <span class="email-label">DIRECT EMAIL ADDRESS</span>
+                <span class="email-address" id="email-text">aniketkrsingh12@gmail.com</span>
+              </div>
+              <button class="copy-btn" id="copy-btn" aria-label="Copy Email">
+                <span id="copy-btn-text">Copy</span>
+                <svg id="copy-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+
+            <div class="contact-actions-row">
+              <a href="mailto:aniketkrsingh12@gmail.com" class="btn-primary">
+                <span>Send Message Directly</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </a>
+              <a href="Aniket_Resume.pdf" target="_blank" rel="noopener" class="btn-secondary">
+                <span>Download Resume (PDF)</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </a>
+            </div>
+
+            <!-- Social Contacts Grid -->
+            <div class="social-cards-grid">
+              
+              <a href="https://github.com/Pavilioni5" target="_blank" rel="noopener" class="social-card">
+                <div class="sc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </div>
+                <div class="sc-content">
+                  <span class="sc-name">GitHub</span>
+                  <span class="sc-handle">@Pavilioni5 ↗</span>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/aniket-kiran-274459292/" target="_blank" rel="noopener" class="social-card">
+                <div class="sc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="sc-content">
+                  <span class="sc-name">LinkedIn</span>
+                  <span class="sc-handle">in/aniket-kiran ↗</span>
+                </div>
+              </a>
+
+              <a href="https://leetcode.com/u/Intel161/" target="_blank" rel="noopener" class="social-card">
+                <div class="sc-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.607c.515.515 1.344.515 1.859 0 .515-.515.515-1.344 0-1.859l-2.697-2.607c-.967-.967-2.29-1.424-3.682-1.424s-2.715.457-3.682 1.424l-4.319 4.38C2.602 11.625 2 13.064 2 14.674s.602 3.049 1.579 4.047l4.332 4.363C8.878 24.062 10.201 24.5 11.582 24.5s2.715-.438 3.682-1.424l2.697-2.607c.515-.515.515-1.344 0-1.859-.515-.515-1.344-.515-1.859 0z"/><path d="M10.802 13.674h10.605c.728 0 1.319-.591 1.319-1.319 0-.728-.591-1.319-1.319-1.319H10.802c-.728 0-1.319.591-1.319 1.319 0 .728.591 1.319 1.319 1.319z"/></svg>
+                </div>
+                <div class="sc-content">
+                  <span class="sc-name">LeetCode</span>
+                  <span class="sc-handle">u/Intel161 ↗</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Live Footer Status Bar -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">~/aniket-kiran</span>
+        <span class="footer-sep">·</span>
+        <span class="footer-copy">© 2026 Aniket Kiran. Designed for performance &amp; scale.</span>
+      </div>
+
+      <div class="footer-center">
+        <span class="telemetry-pill">
+          <span class="pulse-dot"></span>
+          <span>SYSTEM: ALL METRICS OPTIMAL</span>
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <!-- Live Scroll Depth Indicator -->
+        <div class="scroll-tracker">
+          <span class="tracker-label">DEPTH:</span>
+          <span id="scroll-percentage" class="tracker-val">00%</span>
+        </div>
+        <button id="back-to-top" class="back-top-btn" aria-label="Back to Top">
+          <span>TOP</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-msg">Email copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
